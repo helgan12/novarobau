@@ -50,4 +50,32 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
     });
   }
+
+  // Make service cards clickable
+  const serviceCards = document.querySelectorAll('.leistung-card[data-href]');
+  serviceCards.forEach(card => {
+    const url = card.getAttribute('data-href');
+    if (!url) return;
+
+    card.style.cursor = 'pointer';
+    card.setAttribute('role', 'link');
+    card.setAttribute('tabindex', '0');
+
+    const navigate = () => {
+      window.location.href = url;
+    };
+
+    card.addEventListener('click', (event) => {
+      // Wenn direkt auf einen echten Link geklickt wird, nicht doppelt navigieren
+      if (event.target.closest && event.target.closest('a')) return;
+      navigate();
+    });
+
+    card.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        navigate();
+      }
+    });
+  });
 });

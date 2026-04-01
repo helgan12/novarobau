@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta Tags -->
-  <title>Novaro Bau & Sanierung – Innenausbau, Bodenbeläge & Renovierung in Köln</title>
-  <meta name="description" content="Novaro Bau & Sanierung in Köln: Ihr Experte für Innenausbau, Bodenbeläge, Renovierung und Bauelemente. Termingerecht, sauber & professionell. Jetzt kostenlos anfragen!" />
-  <meta name="keywords" content="Innenausbau Köln, Bodenbeläge Köln, Renovierung Köln, Sanierung Köln, Bauelemente Köln, Ausbauarbeiten Köln, Novaro Bau" />
+  <title>Innenausbau Köln & NRW – Novaro Bau & Sanierung | Renovierung & Trockenbau</title>
+  <meta name="description" content="Innenausbau, Trockenbau und Sanierung in Köln, NRW und ganz Deutschland. Novaro Bau & Sanierung – sauber, zuverlässig und termingerecht. Jetzt kostenlos anfragen!">
+  <meta name="keywords" content="Innenausbau Köln, Trockenbau Köln, Sanierung NRW, Renovierung Deutschland, Bauunternehmen Köln, Innenausbau NRW">
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Novaro Bau & Sanierung" />
   <link rel="canonical" href="https://www.novaro-bau.de/" />
@@ -33,7 +33,7 @@
       "postalCode": "50767",
       "addressCountry": "DE"
     },
-    "areaServed": "Köln",
+    "areaServed": ["Köln", "Nordrhein-Westfalen", "Deutschland"],
     "serviceType": ["Innenausbau", "Bodenbeläge", "Renovierung", "Bauelemente", "Ausbauarbeiten"],
     "url": "https://www.novaro-bau.de"
   }
@@ -52,7 +52,7 @@
 <!-- ── NAVIGATION ───────────────────────────────── -->
 <nav id="mainNav" role="navigation" aria-label="Hauptnavigation">
   <div class="logo">
-    <a href="#hero">
+    <a href="index.html">
       <div class="logo-image-wrap">
   		<img src="NovaroLogo.png" alt="Novaro Bau &amp; Sanierung Logo" class="logo-image" />
       </div>
@@ -60,11 +60,11 @@
   </div>
 
   <ul class="nav-links" id="navLinks">
-    <li><a href="#ueber-uns">Über uns</a></li>
-    <li><a href="#leistungen">Leistungen</a></li>
-    <li><a href="#prozess">Ablauf</a></li>
-    <li><a href="#vorteile">Vorteile</a></li>
-    <li><a href="#kontakt" class="nav-cta">Anfragen</a></li>
+  <li><a href="ueber-uns.html">Über uns</a></li>
+  <li><a href="leistungen.html">Leistungen</a></li>
+  <li><a href="ablauf.html">Ablauf</a></li>
+  <li><a href="vorteile.html">Vorteile</a></li>
+  <li><a href="kontakt.html" class="nav-cta">Anfragen</a></li>
   </ul>
 
   <div class="hamburger" id="hamburger" aria-label="Menü öffnen" role="button" tabindex="0">
@@ -76,13 +76,16 @@
 <main>
 <section class="hero" id="hero" aria-label="Startseite">
   <div class="hero-left">
-    <h1>Ihr Experte für <em>Innenausbau</em> & Renovierung</h1>
+    <h1>Innenausbau, Trockenbau & Sanierung in Köln, NRW und ganz Deutschland</h1>
     <p class="hero-desc">
       Novaro Bau & Sanierung steht für handwerkliche Präzision, termingerechte Ausführung und nachhaltige Qualität – vom Bodenbelag bis zur vollständigen Raumsanierung.
     </p>
+    <p class="hero-desc">
+      Wir sind Ihr Ansprechpartner für Innenausbau und Sanierung in Köln, Düsseldorf, Essen und ganz Nordrhein-Westfalen. Auch Projekte in ganz Deutschland übernehmen wir zuverlässig.
+    </p>
     <div class="hero-actions">
-      <a href="#kontakt" class="btn-primary">Kostenlos anfragen</a>
-      <a href="#leistungen" class="btn-secondary">Unsere Leistungen</a>
+      <a href="kontakt.html" class="btn-primary">Kostenlos anfragen</a>
+      <a href="leistungen.html" class="btn-secondary">Unsere Leistungen</a>
     </div>
   </div>
 
@@ -145,7 +148,7 @@
 
   <div class="leistungen-grid">
 
-    <article class="leistung-card reveal">
+    <article class="leistung-card reveal" data-href="bodenbelaege.html">
       <div class="card-number">01</div>
       <span class="card-icon">🪵</span>
       <h3 class="card-title">Bodenbeläge</h3>
@@ -158,7 +161,7 @@
       </ul>
     </article>
 
-    <article class="leistung-card reveal">
+    <article class="leistung-card reveal" data-href="innenausbau.html">
       <div class="card-number">02</div>
       <span class="card-icon">🔨</span>
       <h3 class="card-title">Ausbauarbeiten</h3>
@@ -170,7 +173,7 @@
       </ul>
     </article>
 
-    <article class="leistung-card reveal">
+    <article class="leistung-card reveal" data-href="renovierung.html">
       <div class="card-number">03</div>
       <span class="card-icon">🏠</span>
       <h3 class="card-title">Renovierungsarbeiten</h3>
@@ -182,7 +185,7 @@
       </ul>
     </article>
 
-    <article class="leistung-card reveal">
+    <article class="leistung-card reveal" data-href="bauelemente.html">
       <div class="card-number">04</div>
       <span class="card-icon">🚪</span>
       <h3 class="card-title">Bauelemente</h3>
@@ -190,12 +193,11 @@
       <ul class="card-list">
         <li>Türen & Zargen</li>
         <li>Fenster & Rollläden</li>
-        <li>Treppen & Geländer</li>
         <li>Fest- & Schiebesysteme</li>
       </ul>
     </article>
 
-    <article class="leistung-card reveal">
+    <article class="leistung-card reveal" data-href="sanierung.html">
       <div class="card-number">05</div>
       <span class="card-icon">🔧</span>
       <h3 class="card-title">Sanierung</h3>
@@ -208,7 +210,7 @@
       </ul>
     </article>
 
-    <article class="leistung-card reveal">
+    <article class="leistung-card reveal" data-href="gewerbeausbau.html">
       <div class="card-number">06</div>
       <span class="card-icon">🏢</span>
       <h3 class="card-title">Gewerbeausbau</h3>
@@ -308,28 +310,24 @@
 
     <div class="contact-details">
       <div class="contact-item">
-        <div class="contact-icon-wrap">📍</div>
         <div>
           <div class="contact-label">Adresse</div>
           <div class="contact-value">Forststraße 86, 50767 Köln</div>
         </div>
       </div>
       <div class="contact-item">
-        <div class="contact-icon-wrap">📞</div>
         <div>
           <div class="contact-label">Telefon</div>
 		  <div class="contact-value">0172 3959721</div>
         </div>
       </div>
       <div class="contact-item">
-        <div class="contact-icon-wrap">✉️</div>
         <div>
           <div class="contact-label">E-Mail</div>
           <div class="contact-value">info@novaro-bau.de</div>
         </div>
       </div>
       <div class="contact-item">
-        <div class="contact-icon-wrap">🕐</div>
         <div>
           <div class="contact-label">Erreichbarkeit</div>
 		  <div class="contact-value">Mo–Sa: 10:00 – 20:30 Uhr</div>
@@ -381,29 +379,32 @@
     <div>
       <div class="footer-title">Leistungen</div>
       <ul class="footer-links">
-        <li><a href="#leistungen">Bodenbeläge</a></li>
-        <li><a href="#leistungen">Ausbauarbeiten</a></li>
-        <li><a href="#leistungen">Renovierung</a></li>
-        <li><a href="#leistungen">Bauelemente</a></li>
-        <li><a href="#leistungen">Sanierung</a></li>
-        <li><a href="#leistungen">Gewerbeausbau</a></li>
+    <li><a href="leistungen.html">Bodenbeläge</a></li>
+    <li><a href="leistungen.html">Ausbauarbeiten</a></li>
+    <li><a href="leistungen.html">Renovierung</a></li>
+    <li><a href="leistungen.html">Bauelemente</a></li>
+    <li><a href="leistungen.html">Sanierung</a></li>
+    <li><a href="leistungen.html">Gewerbeausbau</a></li>
       </ul>
     </div>
 
     <div>
       <div class="footer-title">Unternehmen</div>
       <ul class="footer-links">
-        <li><a href="#ueber-uns">Über uns</a></li>
-        <li><a href="#prozess">Unser Ablauf</a></li>
-        <li><a href="#vorteile">Ihre Vorteile</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-        <li><a href="#kontakt">Anfrage stellen</a></li>
+    <li><a href="ueber-uns.html">Über uns</a></li>
+    <li><a href="ablauf.html">Unser Ablauf</a></li>
+    <li><a href="vorteile.html">Ihre Vorteile</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+    <li><a href="kontakt.html">Anfrage stellen</a></li>
       </ul>
     </div>
   </div>
 
   <div class="footer-bottom">
-    <span>© 2025 Novaro Bau & Sanierung · Forststraße 86, 50767 Köln</span>
+	<span>© 2025 Novaro Bau & Sanierung</span>
+    <p style="margin-top:20px; font-size:13px;">
+      Innenausbau in Köln · Düsseldorf · Essen · Bonn · NRW · Deutschland
+    </p>
     <div class="footer-legal">
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
