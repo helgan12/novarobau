@@ -670,6 +670,50 @@ section {
 	font-weight: 700;
 }
 
+/* ── REFERENZEN / GALERIE ───────────────────── */
+#referenzen {
+	background: var(--cream);
+}
+
+.referenzen-header {
+	max-width: 720px;
+	margin-bottom: 40px;
+}
+
+.gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 18px;
+}
+
+.gallery-item {
+	background: #000;
+	border-radius: 4px;
+	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.gallery-item:hover .gallery-image {
+	transform: scale(1.03);
+	opacity: 0.95;
+}
+
+.gallery-caption {
+	padding: 10px 14px 12px;
+	font-size: 13px;
+	color: var(--warm-gray);
+	background: #FFFFFF;
+}
+
 /* ── PROZESS ─────────────────────────────────── */
 #prozess {
 	background: var(--dark);
@@ -1128,6 +1172,10 @@ footer {
 
 	.leistungen-grid {
 		grid-template-columns: 1fr;
+	}
+
+	.gallery-grid {
+		grid-template-columns: 1fr 1fr;
 	}
 
 	.prozess-grid {
