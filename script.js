@@ -41,15 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', updateNavShadow);
   updateNavShadow();
 
-  // Form submit (demo)
-  const submitBtn = document.querySelector('.form-submit');
-  if (submitBtn) {
-    submitBtn.addEventListener('click', () => {
-      submitBtn.textContent = '✓ Anfrage gesendet – Wir melden uns bald!';
-      submitBtn.classList.add('form-submit--sent');
-      submitBtn.disabled = true;
-    });
-  }
+
+  
 
   // Make service cards clickable
   const serviceCards = document.querySelectorAll('.leistung-card[data-href]');
