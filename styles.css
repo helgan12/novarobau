@@ -415,6 +415,17 @@ section {
 	font-weight: 300;
 }
 
+.section-lead a {
+	color: var(--dark);
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.section-lead a:hover {
+	color: var(--gold);
+	text-decoration: underline;
+}
+
 /* ── ABOUT ───────────────────────────────────── */
 #ueber-uns {
 	background: var(--cream);
