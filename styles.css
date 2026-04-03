@@ -1138,6 +1138,7 @@ footer {
 
 	nav {
 		padding: 0 var(--nav-padding-x);
+		overflow: visible; /* mobilde menü nav disinda da gorunsun */
 	}
 
 	.nav-links {
