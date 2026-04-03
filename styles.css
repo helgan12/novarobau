@@ -757,8 +757,7 @@ section {
 }
 
 .prozess-step {
-	padding: 0 32px 0 0;
-	position: relative;
+	padding: 0;
 }
 
 .step-num {
@@ -1228,8 +1227,19 @@ footer {
 	}
 
 	.prozess-grid {
-		grid-template-columns: 1fr 1fr;
-		gap: 40px;
+	grid-template-columns: 1fr;
+	gap: 32px;
+	}
+
+	.prozess-step {
+		padding: 0;
+		min-width: 0;
+	}
+
+	.step-title,
+	.step-desc,
+	.section-lead {
+		word-break: break-word;
 	}
 
 	.prozess-grid::before {
