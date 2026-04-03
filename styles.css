@@ -23,6 +23,7 @@
 html {
 	scroll-behavior: smooth;
 	background: var(--off-white);
+	height: 100%;
 }
 
 body {
@@ -30,6 +31,13 @@ body {
 	background: var(--off-white);
 	color: var(--dark);
 	overflow-x: hidden;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1;
 }
 
 /* Generelle Rück-Link-Stile (z.B. "Zurück zur Startseite") */
