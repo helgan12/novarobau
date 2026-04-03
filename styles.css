@@ -10,7 +10,8 @@
 
 	/* NAV */
 	--nav-padding-x: 60px;
-	--logo-box-height: 78px; /* logo alan yüksekliği */
+	--nav-height: 86px;
+	--logo-visible-height: 90px;
 }
 
 *, *::before, *::after {
@@ -38,12 +39,13 @@ nav {
 	left: 0;
 	right: 0;
 	z-index: 1000;
-	padding: 8px var(--nav-padding-x);
+	height: var(--nav-height);
+	padding: 0 var(--nav-padding-x);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	background: #FFFFFF;
-	overflow: hidden;
+	overflow: visible;
 }
 
 .nav-scrolled {
@@ -58,20 +60,29 @@ nav {
 	flex-shrink: 0;
 }
 
+.logo a {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	text-decoration: none;
+}
+
 .logo-image-wrap {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	height: var(--logo-box-height);
+	justify-content: flex-start;
+	height: 100%;
 	flex-shrink: 0;
+	overflow: visible;
 }
 
 .logo-image {
 	display: block;
-	height: 100%;
+	height: var(--logo-visible-height);
 	width: auto;
 	object-fit: contain;
 	transform: none;
+	max-height: calc(var(--nav-height) - 10px);
 }
 
 .logo-text {
@@ -1130,14 +1141,15 @@ footer {
 
 @media (max-width: 900px) {
 	:root {
-		--nav-height: 120px; /* mobilde fixed nav yüksekliği, içerik altından başlasın */
+		--nav-height: 74px;
 		--nav-padding-x: 24px;
-		--logo-box-height: 58px; /* mobilde daha küçük logo alanı */
+		--logo-visible-height: 130px;
 	}
 
 	nav {
-		padding: 8px var(--nav-padding-x);
-		overflow: visible; /* mobilde menü nav disinda da gorunsun */
+		height: var(--nav-height);
+		padding: 0 var(--nav-padding-x);
+		overflow: visible;
 	}
 
 	.nav-links {
