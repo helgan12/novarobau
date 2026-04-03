@@ -10,8 +10,7 @@
 
 	/* NAV */
 	--nav-padding-x: 60px;
-	--logo-box-height: 110px; /* layout yüksekliği (nav kalınlığı) */
-	--logo-scale: 1.6;        /* görsel boyutu korumak için ölçek */
+	--logo-box-height: 78px; /* logo alan yüksekliği */
 }
 
 *, *::before, *::after {
@@ -39,12 +38,12 @@ nav {
 	left: 0;
 	right: 0;
 	z-index: 1000;
-	padding: 1px var(--nav-padding-x);
+	padding: 8px var(--nav-padding-x);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	background: #FFFFFF;
-	overflow: hidden; /* logo nav dışına taşmasın */
+	overflow: hidden;
 }
 
 .nav-scrolled {
@@ -63,16 +62,16 @@ nav {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	height: var(--logo-box-height);
 	flex-shrink: 0;
 }
 
 .logo-image {
 	display: block;
-	height: var(--logo-box-height); /* layout yüksekliği */
+	height: 100%;
 	width: auto;
 	object-fit: contain;
-	transform: scale(var(--logo-scale)); /* görseli büyüt */
-	transform-origin: left center;
+	transform: none;
 }
 
 .logo-text {
@@ -1131,14 +1130,13 @@ footer {
 
 @media (max-width: 900px) {
 	:root {
-		--nav-height: 78px;
+		--nav-height: 120px; /* mobilde fixed nav yüksekliği, içerik altından başlasın */
 		--nav-padding-x: 24px;
-		--logo-box-height: 88px; /* mobilde daha kucuk logo alanı */
-		--logo-scale: 1.2;      /* mobilde ölçeği küçült */
+		--logo-box-height: 58px; /* mobilde daha küçük logo alanı */
 	}
 
 	nav {
-		padding: 0 var(--nav-padding-x);
+		padding: 8px var(--nav-padding-x);
 		overflow: visible; /* mobilde menü nav disinda da gorunsun */
 	}
 
