@@ -1133,7 +1133,8 @@ footer {
 	:root {
 		--nav-height: 78px;
 		--nav-padding-x: 24px;
-		--logo-box-height: 130px;
+		--logo-box-height: 88px; /* mobilde daha kucuk logo alanı */
+		--logo-scale: 1.2;      /* mobilde ölçeği küçült */
 	}
 
 	nav {
