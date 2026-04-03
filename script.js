@@ -4,15 +4,57 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.getElementById('navLinks');
 
   if (hamburger && navLinks) {
-    const toggleNav = () => navLinks.classList.toggle('open');
+    const openNav = () => navLinks.classList.add('open');
+    const closeNav = () => navLinks.classList.remove('open');
+    const toggleNav = () => {
+      if (navLinks.classList.contains('open')) {
+        closeNav();
+      } else {
+        openNav();
+      }
+    };
 
+    // Hamburger click / keyboard
     hamburger.addEventListener('click', toggleNav);
     hamburger.addEventListener('keydown', e => {
       if (e.key === 'Enter') toggleNav();
     });
 
+    // Linke tıklayınca menüyü kapat
     navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => navLinks.classList.remove('open'));
+      a.addEventListener('click', () => closeNav());
+    });
+
+    // Menü açıksa nav dışına tıklayınca kapat
+    document.addEventListener('click', (event) => {
+      if (!navLinks.classList.contains('open')) return;
+      if (event.target.closest('nav')) return;
+      closeNav();
+    });
+
+    // Basit dokunmatik sürükleme (swipe) ile kapatma
+    let touchStartY = null;
+
+    document.addEventListener('touchstart', (event) => {
+      if (!navLinks.classList.contains('open')) return;
+      if (event.touches.length !== 1) return;
+      touchStartY = event.touches[0].clientY;
+    }, { passive: true });
+
+    document.addEventListener('touchmove', (event) => {
+      if (touchStartY === null) return;
+      const currentY = event.touches[0].clientY;
+      const deltaY = currentY - touchStartY;
+
+      // Yaklaşık 50px yukarı / aşağı sürükleme menüyü kapatsın
+      if (Math.abs(deltaY) > 50) {
+        closeNav();
+        touchStartY = null;
+      }
+    }, { passive: true });
+
+    document.addEventListener('touchend', () => {
+      touchStartY = null;
     });
   }
 
