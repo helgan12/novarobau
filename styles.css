@@ -32,6 +32,18 @@ body {
 	overflow-x: hidden;
 }
 
+/* Generelle Rück-Link-Stile (z.B. "Zurück zur Startseite") */
+.back-link,
+.back-link:visited {
+	color: var(--dark);
+	text-decoration: none;
+}
+
+.back-link:hover {
+	color: var(--gold);
+	text-decoration: underline;
+}
+
 /* ── NAV ─────────────────────────────────────── */
 nav {
 	position: fixed;
