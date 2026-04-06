@@ -52,6 +52,21 @@ main {
 	text-decoration: underline;
 }
 
+/* Telefon-Links: standardmäßig wie normaler Text, nur beim Hover farbig */
+a.contact-phone,
+a.impressum-phone,
+a.phone-link {
+	color: inherit;
+	text-decoration: none;
+}
+
+a.contact-phone:hover,
+a.impressum-phone:hover,
+a.phone-link:hover {
+	color: var(--gold);
+	text-decoration: underline;
+}
+
 /* ── NAV ─────────────────────────────────────── */
 nav {
 	position: fixed;
